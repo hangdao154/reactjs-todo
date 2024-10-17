@@ -33,8 +33,10 @@ function App() {
   }
 
   function handleEditTodo(index) {
-    const valueToBeEdited = todos[index]
+    const valueToBeEdited = todos[index].content
+    const timeToBeEdited = todos[index].time
     setTodoValue(valueToBeEdited)   //Set the input content to be the current editing item
+    setTodoTime(timeToBeEdited)
     handleDeleteTodo(index)
   }
   
